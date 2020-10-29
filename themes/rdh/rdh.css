@@ -1,0 +1,416 @@
+/* 
+This theme was created by DDR 2013 and is called 'rdh'
+if you are going to modify this theme please leave reference to
+the original programmer 'DDR' in the about screen intact.
+email tomato.50.rdhllc@spamgourmet.com for more info.*/
+
+#container {
+width: 980px;
+height: 100%;
+border: none;
+margin: 50px auto;
+}
+a {
+color: #ffffff;
+font-family: Tahoma, Arial, sans-serif;
+}
+#header {
+border-top: 5px #000000 solid;
+border-left: 5px #000000 solid;
+border-right: 5px #000000 solid;
+border-bottom: 1px #ffffff solid;
+background-image: url(header.png);
+background-repeat: no-repeat;
+background-position: right center;
+background-color: #383838;
+padding: 11px;
+}
+#header .title {
+font: 36px 'Century Gothic', Tahoma, Arial, Sans-serif;
+font-variant:small-caps;
+color: #383838;
+text-shadow: 1px -1px 2px black, -1px -1px 2px #555, 0px 1px 1px #555;
+margin: 0;
+padding: 0;
+visibility: hidden;
+}
+#header .title:before {
+font: 36px 'Century Gothic', Tahoma, Arial, Sans-serif;
+font-variant:small-caps;
+color: #383838;
+text-shadow: 1px -1px 2px black, -1px -1px 2px #555, 0px 1px 1px #555;
+margin: 0;
+padding: 0;
+content: "Tomato";
+visibility: visible;
+}
+#header .version {
+font: 13px 'Century Gothic', Tahoma, Arial, Sans-serif;
+color: #383838;
+text-shadow: 1px -1px 1px black, -1px -1px 2px #555, 0px 1px 1px #555;
+margin: 0;
+padding: 0;
+}
+#header .version:after {
+font: 13px 'Century Gothic', Tahoma, Arial, Sans-serif;
+color: #383838;
+text-shadow: 1px -1px 1px black, -1px -1px 2px #555, 0px 1px 1px #555;
+margin: 0;
+padding: 0;
+content: " - RDH Theme by DDR";
+}
+#ident {
+font: 18px 'Century Gothic', Tahoma, Arial, San-serif;
+font-variant:small-caps;
+text-shadow: 1px -1px 1px black, -1px -1px 2px #555, 0px 1px 1px #555;
+text-align:right;
+color:#aaa;
+}
+#navi {
+background: #484848;
+font-family: Tahoma, Arial, Sans-serif;
+width: 160px;
+border-left: 5px #000000 solid;
+border-bottom: 1px #ffffff solid;
+}
+#navi a {
+color: #FFFFFF;
+font-family: Century Gothic, Tahoma, Arial, Sans-serif;
+background: #484848;
+border-bottom: #000000 solid 1px;
+}
+#navi .active {
+color: #FFFFFF;
+background: #383838;
+font-weight:normal;
+}
+#navi a.indent1:before {
+content: "\2022 \a0";
+color: #B0B0B0;
+text-shadow: 0 0 0.2em #B0B0B0,0 0 0.2em #B0B0B0,0 0 0.2em #B0B0B0,0 0 0.2em #969696,0 0 0.2em #969696,0 0 0.2em #807E7E,0 0 0.2em #807E7E,0 0 0.2em #807E7E,0 0 0.2em #807E7E;
+}
+#navi a.indent1 {
+color: #ffffff;
+padding:4px 0 4px 10px;
+font-weight: normal;
+}
+#navi a.indent2 {
+padding:4px 0 4px 25px;
+}
+#tabs a,ul.tabs li a {
+font-family: Century Gothic, Tahoma, Arial, Sans-serif;
+border-radius: 10px 10px 0px 0px; 
+-moz-border-radius: 10px 10px 0px 0px; 
+-webkit-border-radius: 10px 10px 0px 0px;
+border: 2px outset #5B5B5B;
+background: #6B6B6B;
+color: #E8E8E8;
+margin-top:4px;
+}
+/* hover table */
+.tomato-grid .odd:hover,
+.tomato-grid .even:hover {
+background: #484848;
+color: #ffffff;
+}
+.tomato-grid a {
+color: inherit;
+background: inherit;
+}
+.tomato-grid a:hover {
+color: inherit;
+text-decoration: underline;
+background: inherit;
+}
+/* START table */
+.tomato-grid {
+background:#FFFFFF none repeat scroll 0 0;
+border:1px solid #E0E0E0;
+border-collapse:separate;
+border-spacing:1px;
+margin:0 0 3px;
+padding:0;
+width:100%;
+color: #000;
+}
+.tomato-grid .header,
+.bwmg .header {
+background:#6F5334 none repeat scroll 0 0;
+color: #fff;
+}
+.tomato-grid .odd,
+.bwmg .odd {
+background:#F2EEED none repeat scroll 0 0;
+color: #000;
+}
+.tomato-grid .even,
+.bwmg .even {
+background:#EAE3DE;
+color: #000;
+}
+/* END table */
+#content {
+background-color: #484848;
+border-right: 5px #000000 solid;
+border-bottom: 1px #ffffff solid;
+}
+.content {
+font-family: Tahoma, Arial, Sans-serif;
+}
+.content a:hover {
+text-decoration:underline;
+color: #6F5334;
+background: #fff;
+padding: 2px;
+}
+.fields {
+font-family: Tahoma, Arial, Sans-serif;
+background-color: #383838;
+border: solid 1px #ffffff;
+padding: 10px;
+margin: 5px;
+margin-left: 0px;
+}
+.fields td.title.indent1 {
+padding: 1px 15px 1px 0;
+font-family: Tahoma, Arial, Sans-serif;
+}
+.fields td.title.indent2 {
+padding: 1px 5px 1px 10px;
+font-family: Tahoma, Arial, Sans-serif;
+}
+.section {
+font-family: Tahoma, Arial, Sans-serif;
+color: #FFFFFF;
+}
+.section-title {
+font: 1.5em 'Century Gothic', Tahoma, Arial, Sans-serif;
+color: #FFFFFF;
+text-shadow: 1px -1px 2px black, -1px -1px 2px #555, 0px 1px 1px #555;
+border-bottom:1px solid #cccccc;
+margin:0 0 10px 10px;
+padding-bottom:4px;
+}
+small {
+font-family: Tahoma, Arial, Sans-serif;
+}
+small a:hover {
+text-decoration: underline;
+background: #6F5334;
+color: #ffffff;
+}
+input,
+select {
+font-family: Tahoma, Arial, Sans-serif;
+font-size: 12px;
+}
+input[type='checkbox'][disabled] {
+opacity: 0.5;
+}
+input[type='text'],
+input[type='password'] {
+padding: 0;
+margin: 1px;
+border-radius: 5px 5px 5px 5px; 
+-moz-border-radius: 5px 5px 5px 5px; 
+-webkit-border-radius: 5px 5px 5px 5px;
+}
+input[type='checkbox'] {
+padding: 0;
+margin: 1px 0 2px 0;
+border: none;
+}
+input[type='radio'] {
+padding-left: 0;
+margin-left: 0;
+}
+select {
+margin: 0;
+}
+input[type='button'] {
+margin: 0;
+font: bold 1em 'Century Gothic', Tahoma, Arial, Sans-serif;
+border: 2px solid #CCC;
+background: #E8E8E8;
+padding: 2px 3px;
+color: #333;
+border-radius: 5px 5px 5px 5px; 
+-moz-border-radius: 5px 5px 5px 5px; 
+-webkit-border-radius: 5px 5px 5px 5px;
+}
+input[type='button']:hover {
+background: #fff;
+padding: 2px 3px;
+color: #333;
+cursor: hand; cursor: pointer;
+-webkit-box-shadow: 0px 0px 25px rgba(255,255,255,0.8); 
+-moz-box-shadow: 0px 0px 25px rgba(255,255,255,0.8); 
+box-shadow: 0px 0px 25px rgba(255,255,255,0.8); 
+}
+input[type='button']:disabled:hover{
+-webkit-box-shadow:none;
+-moz-box-shadow:none;
+box-shadow:;
+cursor:default;
+color:#8B8B8B; 
+}
+input[type='button']:disabled{
+opacity: 0.5;
+}
+label {
+margin: 5px 0;
+}
+input {
+padding: 2px;
+border: none;
+font: normal 1em 'Century Gothic', Tahoma, Arial, verdana, sans-serif;
+color:#777;
+}
+textarea {
+width:400px;
+padding:2px;
+font: normal 1em 'Century Gothic', Tahoma, Arial, verdana, sans-serif;
+border:1px solid #655E56;
+height:100px;
+display:block;
+color:#777;
+border-radius: 5px 5px 5px 5px; 
+-moz-border-radius: 5px 5px 5px 5px; 
+-webkit-border-radius: 5px 5px 5px 5px;
+}
+#footer {
+border-top: 0px;
+border-bottom: 5px #000000 solid;
+border-left: 5px #000000 solid;
+border-right: 5px #000000 solid;
+padding: 15px 15px 20px 4px;
+background-color: #484848;
+}
+form {
+-moz-border-radius: 25px;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+border: 1px solid #c7c7c7;
+margin: 0px;
+margin-right: 2px;
+padding: 2px;
+background-color: #F7F7F7;
+color: #283033;
+}
+input[type=text]:hover,
+input[type=password]:hover,
+textarea:hover,
+select:hover {
+background-color: #fff;
+color: #283033;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
+background-color: #fff;
+color: #283033;
+}
+input[type=text],
+input[type=password],
+textarea
+{
+padding-left: 3px;
+padding-right: 3px;
+max-width: 99%;
+}
+li, div {
+font-family: Tahoma, Arial, Sans-serif;
+}
+#tabs a:hover {
+background: #6F5334 none repeat scroll 0 0;
+}
+.about {
+margin:0px 0px;
+color:#fff;
+}
+.about:after {
+font: 13px 'Century Gothic', Tahoma, Arial, Sans-serif;
+font-variant:small-caps;
+color: #383838;
+text-shadow: 1px -1px 1px black, -1px -1px 2px #555, 0px 1px 1px #555;
+display: block;
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+white-space: pre-line;
+content:"about theme: 'rdh' was created by ddr. this theme has a few new features not seen in a theme before. led like bullets, rounded tabs, subtle embossing, shadow text effects, and button highlights are just some of them. the theme is designed to be very clean and professional while still being very light on resources. all elements are created using 100% code. the only graphic is the header on the upper right so the size of the entire theme is about 10kb. if you enjoy using this theme, please let me know by emailing me at tomato.50.rdhllc@spamgourmet.com.\a\a\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0" URL(http://s01.flagcounter.com/count/dKHt/bg_3B3B3B/txt_FFFFFF/border_CCCCCC/columns_3/maxflags_27/viewers_3/labels_1/pageviews_0/flags_1/);
+color:#fff;
+}
+#result {
+color:#000;
+}
+#footer:before {
+visibility: hidden;
+content: url(http://s01.flagcounter.com/count/dKHt/bg_3B3B3B/txt_FFFFFF/border_CCCCCC/columns_3/maxflags_27/viewers_3/labels_1/pageviews_0/flags_1/)
+}
+
+/*----------=[Original Color]=--------  
+Background = #021d6d, 000a28
+Bullets =  #3EB304, #4AD604, #50E805 
+Tabs = #343f6f 
+*/
+
+body {
+background: #021d6d; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #021d6d 0%, #000a28 92%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#021d6d), color-stop(95%,#000a28)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #021d6d 0%,#000a28 92%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #021d6d 0%,#000a28 92%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #021d6d 0%,#000a28 92%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #021d6d 0%,#000a28 92%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#021d6d', endColorstr='#000a28',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+a:hover {
+text-decoration: underline;
+background: inherit;
+color: #FFFFFF;
+text-shadow: 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304;
+}
+
+#navi a:hover {
+background: #383838;
+color: #FFFFFF;
+text-decoration:none;
+border-bottom: #000000 solid 1px;
+text-shadow: 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304, 0 0 0.2em #3EB304;
+}
+
+#navi a.indent1.active:before {
+content: "\2022 \a0";
+color: #3EB304;
+text-shadow: 0 0 0.2em #4AD604,0 0 0.2em #4AD604,0 0 0.2em #4AD604,0 0 0.2em #4AD604,0 0 0.2em #4AD604,0 0 0.2em #4AD604,0 0 0.2em #50E805,0 0 0.2em #50E805,0 0 0.2em #50E805;
+}
+
+#tabs li a.active,ul.tabs li a.active {
+color: #fff;
+background: #343f6f;
+border-radius: 10px 10px 0px 0px; 
+-moz-border-radius: 10px 10px 0px 0px; 
+-webkit-border-radius: 10px 10px 0px 0px; 
+border: 2px outset #6B6B6B;
+}
+
+#tabs li a:hover, ul.tabs li a:hover {
+background: #343f6f;
+}
+
+input[type='button']:active{
+position:relative;
+top:1px;
+-webkit-box-shadow: 0px 0px 25px #3EB304; 
+-moz-box-shadow: 0px 0px 25px #3EB304; 
+box-shadow: 0px 0px 25px r#3EB304;
+}
+
+/*----------------------------------------*/
+

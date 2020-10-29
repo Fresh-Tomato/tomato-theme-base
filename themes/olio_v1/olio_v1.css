@@ -1,0 +1,549 @@
+/*
+	Olio theme cobbled together by WaLLy3K, 3/10/2014
+	Designed in Chrome 37, tested on Safari 8
+	For those on IE, go to Gear > Compatibility View Settings > Untick: Display intranet sites in CW
+	All commented colour references are against a white (#FFF) background
+	TomatoFW Red: #AF4141
+*/
+
+* { font-family: Arial, sans-serif !important; }
+html { overflow-y: scroll; }
+
+body {
+	background: #808080 url('bg.png') repeat;
+	color: #4C4C4C; /* Black 70% */
+	margin-top: 5px;
+	text-shadow: 0 1px rgba(255,255,255,0.5);
+}
+
+/* General Theme Content */
+a {
+	color: #22597C; /* TFW Red & 25% Black */
+}
+
+a:hover {
+	text-decoration: underline;
+	background-color: transparent;
+	color: rgba(226,109,61,1) !important;
+	transition-duration:.2s;
+	transition-timing-function:ease-in-out;
+}
+
+select, input, textarea {
+	margin-left: 0 !important;
+	padding: 2px 0;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	background-color: #FFF !important;
+	color: inherit;
+}
+
+select {
+	appearance:none;
+	-moz-appearance:none; /* Firefox */
+	-webkit-appearance:none; /* Safari and Chrome */
+	background: url('arrow.svg') no-repeat;
+	background-position: right center;
+	padding-right: 17px;
+}
+
+select::-ms-expand { display: none; }
+
+textarea, input {
+	text-indent: 2px;
+}
+
+/* Text/PW fields; EG: IP Traffic: Daily */
+input {
+	padding: 3px 0 !important;
+}
+
+input[type='button'] {
+	text-indent: 0;
+	color: inherit;
+	padding: 3px 8px !important;
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.03);
+}
+
+select:hover, #content input:enabled:hover, #footer input:hover, textarea:hover {
+	color: inherit;
+}
+
+input:enabled:hover {
+	cursor: pointer;
+}
+
+/* Dull out unusable items */
+select:disabled, input:disabled, textarea:disabled, input:disabled:hover { 
+	background-color: #E5E5E5 !important; /* Black: 10% */
+	color: #7F7F7F !important; /* Black: 50% */
+}
+
+/* Hide disabled buttons, EG: Enable Wireless (When Active) */
+#content input[type='button']:disabled { 
+	display: none;
+}
+
+	/* Header */
+/* Page Content Container */
+#container {
+	border-radius: 10px;
+	box-shadow: 0px 0px 56px rgba(0,0,0,0.3);
+	border: 1px solid transparent;
+	border-top-style: none;
+}
+
+#container {
+	width: 960px !important;
+}
+
+#header {
+	background: #eee6e6; /* Old browsers */
+	background: -moz-linear-gradient(top,  #eee6e6 1%, #dfd0d0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#eee6e6), color-stop(100%,#dfd0d0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #eee6e6 1%,#dfd0d0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #eee6e6 1%,#dfd0d0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #eee6e6 1%,#dfd0d0 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #eee6e6 1%,#dfd0d0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee6e6', endColorstr='#dfd0d0',GradientType=0 ); /* IE6-9 */
+	border: 1px solid transparent;
+	border-style: solid none;
+	border-radius: 10px 10px 0 0;
+	padding: 0;
+}
+
+/* Inspiration credit goes to Jacky @ advancedtomato.com */
+#header .title {
+	background-image: url('logo.svg');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 32px 32px;
+	padding: 8px 12px 8px 36px;
+	margin-left: 12px;
+	font-size: 2em;
+	display: inline-block;
+	color: inherit;
+	height: 30px;
+}
+
+#header .title:after {
+	content: " Firmware";
+}
+
+#nversion { padding: 0; }
+
+#att1 {
+	width: 50%;
+	margin: 0 auto;
+	padding: 5px 5px 0 5px;
+	background-color: #eee6e6;
+	border-radius: 10px;
+	border: 1px dashed transparent;
+}
+
+/* Header: Right Side */
+#header .version {
+	padding: 8px 12px;
+	height: 30px;
+	float: right;
+}
+
+#content #ident {
+	font-weight: bold;
+	position: absolute;
+	width: 792px;
+	margin: -30px 0 20px 0;
+}
+
+#content #ident:before {
+	content: "Device: ";
+}
+
+#header .version, #content #ident {
+	color: inherit;
+	font-size: 1em;
+}
+
+	/* General Sidebar Content */
+#container #body #navi {
+	background-color: #F5F5F5; /* Black: 4% */
+	border: 0 solid transparent;
+	border-right-width: 1px;
+	margin: 0;
+	padding: 5px 0 5px 0;
+	width: 144px;
+}
+
+#navi a, #navi a:hover {
+	color: inherit;
+	font-size: 1.1em;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+#navi a.indent1.active {
+	padding: 2px 10px 4px 10px;
+}
+
+#navi a.indent1.active:hover, #navi a.indent2.active:hover {
+	color: #4C4C4C !important;  /* Black 70% */
+}
+
+#navi a.indent1 {
+	padding: 3px 10px;
+}
+
+#navi a.indent2 {
+	padding: 3px 0 3px 20px;
+	border: 1px solid transparent;
+	font-size: 0.9em;
+	white-space: nowrap;
+}
+
+#navi a.indent2.active { 
+	border: 1px solid #BECDDC;
+	border-style: solid none;
+}
+
+	/* General Body Content */
+#container { width: 950px; }
+
+#container #body { 
+	background-color: #FAFAFA;
+}
+
+#container #body #content {
+	margin: 0;
+	padding: 6px;
+}
+
+#content .section-title {
+	padding: 0 0 6px 0;
+	font-size: 1.5em;
+	font-family: Verdana, Geneva, sans-serif;
+	color: inherit;
+}
+
+/* Hide the "Hide/Show" button on overview, making .section-title clickable */
+#content .section-title small a {
+	position: absolute;
+	display: block;
+	font-size: 0em;
+	color: transparent;
+	text-shadow: none;
+	margin-top: -18px;
+	width: 200px;
+	height: 20px;
+}
+
+/* Overview: Eth Ports State */
+#content .section .section-title { 
+	margin-left: -5px;
+}
+
+/* Space between WAN and LAN ports */
+#content #ports .fields .indent2:nth-child(2) { 
+	width: 218px;
+}
+
+/* Eth Ports Text */
+#content .section .fields .title { 
+	font-weight: bold;
+}
+
+#content #ports .fields .indent2 {
+	padding: 0;
+}
+
+	/* Tomato Grid */
+.tomato-grid, .tomato-grid a, .tomato-grid tr, .bwmg { /* Get CLU to hate you with this one simple trick! */
+	background-color: transparent;
+	border: 0;
+	border-spacing: 0;
+	color: inherit;
+}
+
+.tomato-grid, .bwmg {
+	border: 1px solid #000;
+	border-radius: 4px;
+}
+
+.tomato-grid td, .bwmg td {
+	padding: 4px;
+}
+
+.tomato-grid input {
+	margin-bottom: 2px;
+}
+
+.tomato-grid .header td, .bwmg .header td {
+	border: 1px solid #000;
+	border-style: none solid solid none;
+	background-color: #FFF;
+}
+
+.tomato-grid .footer td, .tomato-grid .controls td {
+	border: 1px solid #000;
+	border-style: solid none none none;
+	background-color: #F9F9F9;
+}
+
+.tomato-grid tr:last-child > td:first-child, .bwmg tr:last-child > td:first-child { border-radius: 0 0 0 3px; }
+.tomato-grid tr:last-child > td:last-child, .bwmg tr:last-child > td:last-child { border-radius: 0 0 3px 0; }
+.tomato-grid .header:last-child > td, .bwmg .header:last-child > td { border-radius: 0; } /* Make grid header correct if no child entries are listed */
+.tomato-grid .header td:last-child, .bwmg .header td:last-child { border-right-style: none; border-radius: 0 3px 0 0 !important; }
+.tomato-grid .header td:first-child, .bwmg .header td:first-child { border-radius: 3px 0 0 0 !important; }
+
+/* Grid Row Highlights */
+.tomato-grid .even, .tomato-grid .even:hover, .bwmg .even { background-color: #F2F2F2; } /* Black: 5% */
+.tomato-grid .odd, .tomato-grid .odd:hover, .bwmg .odd { background-color: #FFF; }
+
+.tomato-grid .editor { background-color: #E5E5E5; }
+.tomato-grid .controls td, #res-over-grid .footer td { border-radius: 0 0 3px 3px !important; }
+.tomato-grid td:last-child > input { margin: 0; }
+
+	/* Specific Grid Fixes */
+#lan-grid input[type='text'], #lan-grid input[type='password'] {
+	text-indent: 1px;
+}
+
+#dev-grid .header .co5, #dev-grid .header .co8 {
+	padding: 4px 0 4px 4px;
+}
+
+/* Make MAC clickable for OUI but still allow MAC highlighting */
+#dev-grid .co2 small a:first-child { 
+	position: absolute;
+	margin-top: -15px;
+	margin-left: 5px;
+	width: 90px;
+	height: 15px;
+	color: transparent;
+	font-size: 0em;
+}
+
+/* Make MAC controls less... clunky looking? */
+#dev-grid .co2 small {
+	opacity: 0.25;
+}
+
+#dev-grid .odd:hover small, #dev-grid .even:hover small {
+	opacity: 1;
+	transition-duration:.2s;
+	transition-timing-function:ease-in-out;
+}
+
+/* bwm-daily-grid right float does not have a unique property to assign this to:
+#content div .tomato-grid .header td:first-child { border-radius: 3px 3px 0 0 !important; }
+*/
+/* Bandwith: Weekly/Monthly - Drop boxes */
+#content div select { margin-bottom: 2px; }
+
+/* IP Traffic: Transfer Rates 80px */
+#grid .header .co1 {
+	min-width: 71px;
+}
+
+#daily-grid .header .co1, #monthly-grid .header .co1 { /* 150px */
+	width: 141px;
+}
+
+ /* QoS: Classification */
+#qg .x1b .fi2 { width: 231px; }
+
+	/* Tomato Tabs - Bandwidth: RT & 24H, Advanced: Virtual Wireless, VPN Tunnelling: OVPN Sv/Cl, Admin: Scripts */
+/* Reset */
+#content #tabs li, #content #tabs li a{
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-weight: normal;
+	width: auto;
+	color: inherit;
+}
+
+#content #tabs li {
+	display: inline-block;
+	margin-right: 5px;
+	background-color: transparent;
+}
+
+#content #tabs li a, #content #tabs li a.active {
+	min-width: 120px;
+	padding: 6px;
+	border: 1px solid transparent;
+}
+
+#content #tabs li a.active {
+    font-weight: bold;
+	border-radius: 4px;
+	border: 1px solid #BECDDC;
+}
+
+#content #tabs li a.active:hover, #content .tabs li a.active:hover {
+	color: inherit !important;
+}
+
+/* Bandwidth: RT & 24H, Advanced: Virtual Wireless */
+#rstats #tab-area li a, #rstats #tab-area li a.active, #sesdiv #tabs li a, #sesdiv #tabs li a.active {
+	min-width: 65px;
+}
+
+	/* Tomato Tab Line - VPN Tunnelling: OpenVPN Sv/Cli */
+.section #tabs-bottom, .tabs-bottom { border: 0 !important; }
+.section #tabs li a#server1, .section #tabs li a#server2, .section #tabs li a#client1, .section #tabs li a#client2 { min-width: 103px; }
+.section .tabs { padding: 5px 0 0 0; }
+
+.section .tabs li a {
+	background-color: #FFF;
+	border: 1px solid transparent;
+	color: inherit;
+	margin: 0;
+	margin-right: -1px;
+}
+
+.section .tabs li a:hover {
+	font-weight: normal;
+}
+
+.section .tabs li .active:hover {
+	font-weight: bold;
+}
+
+.section .tabs li .active {
+	border: 1px solid #BECDDC;
+}
+
+.section .tabs li:first-child > a { border-radius: 4px 0 0 4px; }
+.section .tabs li:last-child > a { border-radius: 0 4px 4px 0; }
+
+	/* OCD Width Fixes */
+/* Basic: Network */
+#_wan_proto, #_ppp_demand, #_modem_dev, #_f_wl0_mode, #_wl0_security_mode, #_f_wl1_mode, #_wl1_security_mode { width: 150px; }
+#_modem_ipaddr, #_wan_ipaddr, #_wan_netmask, #_wan_gateway, #_modem_init, #_modem_apn, #_f_dns_1, #_f_dns_2, #_f_dns_3, #_wan_wins, #_wl0_ssid, #_wl1_ssid { width: 140px; }
+#_ppp_username, #_ppp_passwd, #_ppp_service, #_ppp_custom, #_l2tp_server_ip, #_wl0_wpa_psk,#_wl1_wpa_psk { width: 350px; }
+#_ppp_redialperiod, #_pppoe_lei, #_pppoe_lef, #_modem_pin, #_wl0_wpa_gtk_rekey, #_wl1_wpa_gtk_rekey { width: 70px; }
+#_mtu_enable{ width: 80px; margin-right: 4px; }
+#_wl0_net_mode, #_wl0_channel, #_wl0_nbw_cap, #_f_wl0_nctrlsb, #_wl0_crypto, #_wl1_net_mode, #_wl1_channel, #_wl1_nbw_cap, #_f_wl1_nctrlsb, #_wl1_crypto { width: 107px; }
+#_f_wan_mtu { width: 55px; }
+
+/* Basic: IPv6 */
+#_f_ipv6_prefix_length, #_ipv6_relay, #_ipv6_tun_mtu, #_ipv6_tun_ttl { width: 68px; }
+#_f_ipv6_rtr_addr_auto { width: 70px; margin: 0 4px 0 1px; }
+#_f_ipv6_prefix, #_f_ipv6_dns_1, #_f_ipv6_dns_2, #_f_ipv6_dns_3 { width: 323px; }
+#_ipv6_service, #_f_ipv6_rtr_addr { width: 248px; }
+#_ipv6_tun_addr { width: 258px; }
+
+#qosg-grid select { width: auto; }
+
+/* Advanced: Wireless */
+#_wl0_afterburner, #_wl0_ap_isolate, #_wl0_auth, #_wl0_rateset, #_wl0_gmode_protection, #_wl0_reg_mode, #_wl0_btc_mode, #_wl0_frameburst, #_wl0_mrate, #_wl0_plcphdr, #_wl0_mimo_preamble, #_wl0_obss_coex, #_wl0_antdiv, #_wl0_txant, #_wl0_rate, #_wl0_wme, #_wl0_wme_no_ack, #_wl0_wme_apsd, #_wl0_wmf_bss_enable,
+#_wl1_afterburner, #_wl1_ap_isolate, #_wl1_auth, #_wl1_rateset, #_wl1_gmode_protection, #_wl1_reg_mode, #_wl1_btc_mode, #_wl1_frameburst, #_wl1_mrate, #_wl1_plcphdr, #_wl1_mimo_preamble, #_wl1_obss_coex, #_wl1_antdiv, #_wl1_txant, #_wl1_rate, #_wl1_wme, #_wl1_wme_no_ack, #_wl1_wme_apsd, #_wl1_wmf_bss_enable
+{ width: 90px; }
+#_wl0_bcn, #_f_wl0_distance, #_wl0_dtim, #_wl0_frag, #_wl0_maxassoc, #_wl0_rts, #_wl0_txpwr,
+#_wl1_bcn, #_f_wl1_distance, #_wl1_dtim, #_wl1_frag, #_wl1_maxassoc, #_wl1_rts, #_wl1_txpwr
+{ width: 89px; }
+#_wl0_mitigation, #_wl1_mitigation { width: 210px; }
+
+/* USB and NAS: Assorted Fields */
+#_ftp_enable, #_ftp_anonymous, #_ftp_dirlist { width: 160px; }
+#_ftp_anonroot, #_ftp_pubroot, #_ftp_pvtroot { width: 158px; }
+#_ftp_port, #_ftp_max, #_ftp_ipmax, #_ftp_anonrate, #_ftp_rate, #_ftp_staytimeout { width: 50px; }
+#_f_ftp_sip { width: 350px; }
+
+#_smbd_enable, #_smbd_cpage, #_smbd_autoshare { width: 200px; }
+#_smbd_user, #_smbd_passwd, #_smbd_wgroup { width: 190px; }
+
+/* Admin: Assorted Fields */
+#_f_http_local, #_f_http_remote { width: 120px; }
+#_http_lanport, #_https_lanport, #_http_wanport, #_sshd_port, #_telnetd_port, #_f_limit_hit, #_f_limit_sec, #_rstats_offset, #_cstats_offset { width: 50px; }
+#_web_dir, #_web_css { width: 230px; }
+#_ttb_css { width: 220px; }
+#_f_rmgt_sip, #_rstats_exclude, #_cstats_exclude, #_cstats_include { width: 390px; }
+#_set_password_1, #_set_password_2 { width: 110px; }
+
+#_tomatoanon_answer, #_tomatoanon_enable, #_cstats_labels { width: 400px; }
+#_f_loc, #_rstats_stime, #_cstats_stime { width: 130px; }
+#backup-name, #restore-name { width: 230px; }
+
+#_f_cifs1_sec, #_f_cifs2_sec { width: 208px; }
+
+#_log_file_size, #_log_file_keep, #_log_limit, #_log_wmdmax, #_log_wmsmax { width: 60px; }
+#_log_mark, #_log_in, #_log_out, #_log_wmtype { width: 180px; }
+#_log_file_path { width: 153px; }
+#_webmon_dir { width: 170px; }
+
+	/* Everything Else */
+#_dnsmasq_custom, #_upnp_custom, #_sch_c1_cmd, #_sch_c2_cmd, #_sch_c3_cmd, #_sch_c4_cmd, #_sch_c5_cmd, #_sshd_authkeys, .as-script {
+	text-indent: 0px;
+	padding-left: 3px;
+}
+
+.as-script {
+	border-top-width: 1px !important;
+	border-top-style: solid !important;
+	overflow: auto !important;
+	height: 400px !important;
+}
+	
+/* Admin: Upgrade */
+#afu-upgrade-button {
+	padding: 6px !important;
+	height: 28px !important;
+}
+
+/* About: Penguin */
+#content #tux {
+	border-radius: 8px;
+	padding: 4px;
+	background-color: #FFF;
+	border-width: 1px;
+	border-style: solid;
+}
+
+/* About: Donate Button */
+.about input { 
+	border: 0;
+	background-color: transparent !important;
+}
+
+#footer {
+	background-color: #F5F5F5; /* Black: 4% */
+	border-radius: 0 0 8px 8px;
+	border-width: 0;
+	border-style: dotted;
+	border-top-width: 1px;
+	padding: 4px 8px;
+	height: 26px;
+}
+
+#footer #footer-msg {
+	background-color: transparent;
+}
+
+/* "Content" will not work in IE due to DOCTYPE HTML4 I believe */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#footer div img { 
+		height: 24px;
+		width: 24px;
+		position: relative;
+		margin-right: 2px;
+		margin-top: -2px;
+		content: url('load.gif');
+	}
+}
+
+	/* Border Colour Group */
+#header, #container, #body #navi, #content .section-title, #footer, #att1 { 
+	border-color: #B2B2B2 !important; /* Black: 30% */
+}
+
+select, input, textarea, .tomato-grid, .tomato-grid .header td, .tomato-grid .controls td, .tomato-grid .footer td, .bwmg, .bwmg .header td, .section .tabs li a, #tux {
+	border-color: #CCC; /* Black: 20% */
+}
+
+#header { border-top-color: rgba(255,255,255,0.7) !important; }
+
+#navi a.indent2.active, #content #tabs li a.active, .section .tabs li .active {
+	background-color: rgba(81,186,252,0.2); /* #D1E8FF */
+}
