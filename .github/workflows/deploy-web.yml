@@ -13,7 +13,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # Only run this job if repo is upstream and PR is merged
-    if: github.repository == "Fresh-Tomato/tomato-theme-base" &&
+    if: github.repository == 'Fresh-Tomato/tomato-theme-base' &&
       github.event.pull_request.merged == true
 
     # The type of runner that the job will run on
