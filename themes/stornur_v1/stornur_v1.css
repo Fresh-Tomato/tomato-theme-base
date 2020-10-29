@@ -1,0 +1,680 @@
+/* Reset majority of styles set by default tomato.css */
+#container, #header, #navi, #content, #nversion, #footer, select, input[type], textarea, td, #header .title, #header .version, .tomato-grid, .tomato-grid td, .tomato-grid .header, .tomato-grid .controls, .tomato-grid .footer, .bwmg, .bwmg td, .bwmg .header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	color: inherit;
+	background: inherit;
+	border-spacing: 0;
+	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+
+html { overflow-y: scroll; }
+
+body {
+	background: transparent, linear-gradient(to bottom, #DCDCDC, #EBEBEB 500px);
+	color: rgba(64,64,64,0.9);
+	text-shadow: 0 1px rgba(255,255,255,0.6);
+	font: 0.75em Arial, sans-serif;
+}
+
+/* Layer "static" BG on top of gradient */
+table#container { background: url('bg.png'); }
+
+a, .tomato-grid a { color: rgba(27,54,81,0.9); }
+
+a:hover {
+	text-decoration: none;
+	color: rgba(255,127,0,0.95) !important;
+	background-color: transparent;
+	transition-duration: .2s;
+}
+
+input[type] {
+	padding: 2px 0;
+	text-indent: 4px;
+}
+
+input[type='button'] {
+	background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+	padding: 2px 4px;
+	text-indent: 0;
+	color: inherit !important;
+	cursor: pointer;
+}
+
+input[type='button']:hover, input[type='button']:active {
+	background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.1));
+}
+
+input[type='button']:disabled { 
+	cursor: auto;
+}
+
+select {
+	appearance: none; -moz-appearance: none; -webkit-appearance: none;
+	padding-right: 17px !important;
+	text-indent: 5px;
+	padding: 2px 0;
+}
+
+select, .tomato-grid select, .tomato-grid .sortasc:after, .tomato-grid .sortdes:after {
+	background: url('glyph.svg') no-repeat right -66px !important;
+}
+
+/* Reproduce and test this please */
+select.error {
+	background-color: #FFFFD0 !important;
+}
+
+textarea { padding: 4px; }
+
+input[type]:disabled, select[id]:disabled, textarea:disabled  { 
+	color: rgba(64,64,64,0.5) !important;
+}
+
+input[type='text']:disabled, input[type='password']:disabled, select[id]:disabled, textarea:disabled  { 
+	background: rgba(0,0,0,0.05) !important;
+}
+
+select[id], input[type], textarea {
+	margin-left: 0;
+	background-color: rgba(255,255,255,0.85) !important;
+	border: 1px solid rgba(0,0,0,0.3) !important;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+	text-shadow: inherit;
+	font-size: 1.2em;
+}
+
+select::-ms-expand { display: none; }
+input[type='checkbox'] { box-shadow: none; }
+
+/* Remove second button from Status > Overview > Wireless */
+#content input[id^='b_']:disabled { 
+	display: none;
+}
+
+#container, #header {
+	width: 100%;
+	background: transparent;
+}
+
+#header {
+	display: table;
+	height: 42px;
+	border: 1px solid rgba(174,174,174,0.85);
+	border-top-color: rgba(255,255,255,0.85);
+	border-style: solid none;
+	background: linear-gradient(-45deg, rgba(0,0,0,0.2), transparent 100%);
+}
+
+#header, #footer { margin-bottom: 8px; }
+
+#header .title, #header .version {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	color: inherit;
+	background: url('glyph.svg') no-repeat 4px -27px, linear-gradient(to bottom, rgba(240,240,240,0.85) 0%, rgba(220,220,220,0.85) 100%);
+}
+
+#header .title {
+	font: bold 1.8em "Trebuchet MS", sans-serif;
+	text-indent: 40px;
+}
+
+#header .version, #ident {
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: right;
+	padding-right: 5px;
+	background-position: 0 -200px;
+}
+
+#header .title:after { content: " Firmware"; }
+#header .version:after { content: "\a  "; white-space: pre; }
+#ident:before { content: "\a Device: "; white-space: pre; }
+
+/* Device Name: Top Right */
+#ident {
+	position: absolute;
+	top: 11px;
+	width: 99.5%;
+	color: inherit;
+	left: 0;
+	min-width: 940px;
+}
+
+#navi {
+	width: 165px;
+}
+
+#navi a, #navi a:hover, #tabs li a, #tabs li a:hover, .tabs li a, .tabs li a:hover {
+	color: inherit;
+	font-weight: bold;
+	background: transparent;
+	padding: 5px 0 !important;
+	border: 1px solid transparent;
+	border-radius: 6px;
+}
+
+#navi a, #navi a:hover {
+	border-right-style: none;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#navi .indent1.active, .indent1.active:hover {
+	color: rgba(64,64,64,0.65) !important;
+}
+
+#navi .indent2 {
+	margin-left: 20px;
+	text-indent: 8px;
+}
+
+.tabs li a, .tabs li a:hover {
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 1px 0 !important;
+	margin-right: -1px;
+	background: #FFF;
+}
+
+#navi a.indent2.active, #tabs li a.active, .tabs li a.active {
+	border-color: rgba(0,0,0,0.1);
+	background: rgba(180,205,230,0.85);
+	box-shadow: -1px 1px 2px rgba(0,0,0,0.1);
+	color: inherit;
+}
+
+#navi a.indent2.active, #tabs li a.active:hover, .tabs li a.active:hover {
+	font-weight: bold;
+	color: inherit !important;
+}
+
+#tabs li a.active, .tabs li a.active {
+	position: relative;
+	z-index: 1
+}
+
+#tabs-bottom, .tabs-bottom { border: 0 !important; }
+#tabs-bottom { margin-bottom: 8px; }
+#tab-area { margin-bottom: 8px; }
+
+.tabs li:first-child > a { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.tabs li:last-child > a { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.tabs li:not(:first-child):not(:last-child) > a { border-radius: 0; }
+
+/* Icons in Navigational Pane */
+#navi .indent1[href]:before {
+	content: " ";
+	padding: 13px 13px 0 0;
+	background: url(glyph.svg) 0 -103px;
+	position: relative;
+	margin: 0 3px 0 0;
+	float: left;
+}
+
+#navi .indent1[href^='status-']:before { background-position: 0 -103px; }
+#navi .indent1[href^='bwm-']:before { background-position: -14px -103px; }
+#navi .indent1[href^='ipt-']:before { background-position: -28px -103px; }
+#navi .indent1[href^='tools-']:before { background-position: -42px -103px; }
+#navi .indent1[href^='basic-']:before { background-position: 0 -117px; }
+#navi .indent1[href^='advanced-']:before { background-position: -14px -117px; }
+#navi .indent1[href^='forward-']:before { background-position: -28px -117px; }
+#navi .indent1[href^='restrict']:before { background-position: -42px -117px; }
+#navi .indent1[href^='qos-']:before { background-position: 0 -131px; }
+#navi .indent1[href^='bwlimit']:before { background-position: -14px -131px; }
+#navi .indent1[href^='splashd']:before { background-position: -28px -131px; }
+#navi .indent1[href^='nas-']:before { background-position: -42px -131px; }
+#navi .indent1[href^='vpn-']:before { background-position: 0 -145px; }
+#navi .indent1[href^='admin-']:before { background-position: -14px -145px; }
+#navi .indent1[href^='about']:before { background-position: -28px -145px; }
+#navi .indent1[href$='reboot()']:before { background-position: -42px -145px; }
+#navi .indent1[href$='shutdown()']:before { background-position: 0 -159px; }
+#navi .indent1[href$='logout()']:before { background-position: -14px -159px; }
+
+#navi .indent2[href='status-log.asp']:before { content: "System "; }
+
+/* Center #navi and #container */
+#body, #container > tbody > tr:last-child {
+	display: table;
+	width: 947px;
+	margin: 0 auto;
+}
+
+#content, #footer {
+	box-shadow: -2px 0 1px -1px rgba(0,0,0,0.08), 2px 0 1px -1px rgba(0,0,0,0.08), 0 -2px 1px -1px rgba(0,0,0,0.08);
+	border-radius: 6px 6px 0 0;
+	background-color: rgba(255,255,255,0.85);
+}
+
+#content {
+	padding: 10px;
+}
+
+#graph {
+	width: 750px;
+}
+
+#nversion {
+	background: transparent;
+	text-align: center;
+	width: 60%;
+	margin: auto;
+}
+
+#att1 {
+	border: 1px dashed #CBCBCB;
+	border-radius: 6px;
+	background: rgba(240,220,110,0.9);
+	padding: 3px 5px 0 5px;
+	text-align: center;
+	width: 60%;
+	margin: auto;
+}
+
+#att1 .section-title {
+	background: linear-gradient(to right, #AEAEAE, #AEAEAE) no-repeat 0 28px;
+}
+
+#content .section-title {
+	padding: 0 0 6px 0;
+	font: 1.6em Verdana, Geneva, sans-serif;
+	color: inherit;
+	border: 0;
+	background: linear-gradient(to right, rgba(85,85,85,0.5), transparent 60%) no-repeat 0 28px;
+	background-size: 100% 1px;
+}
+
+/* Disable Show/Hide text & make .section-title clickable */
+#content .section-title small a {
+	position: absolute;
+	display: block;
+	font-size: 0em;
+	color: transparent;
+	background-color: transparent;
+	margin-top: -20px;
+	width: 250px;
+	height: 20px;
+}
+
+#content .section .section-title { 
+	margin-left: -5px;
+}
+
+/* Left descriptor titles */
+.fields td.indent1, #content #ports .fields .indent2:nth-child(2) {
+	width: 200px;
+	font-weight: bold;
+}
+
+/* Nice Ethernet Icon & Signal Flash */
+#eth_1000, #eth_100, #eth_off {
+	height: 0;
+	width: 0;
+	background: url(glyph.svg) no-repeat 2px 2px;
+	padding: 31px 46px 0 0;
+	margin: 2px 0;
+	box-shadow: 0 0 2px 2px black;
+	border-radius: 3px;
+}
+
+#eth_1000 { animation: e1000 0.2s infinite alternate; -webkit-animation: e1000 0.2s infinite alternate }
+#eth_100 { animation: e100 0.2s infinite alternate; -webkit-animation: e100 0.2s infinite alternate }
+
+@keyframes e1000 { from {box-shadow: 0 0 2px 2px #000;} to {box-shadow: 0 0 2px 2px #115725;} }
+@-webkit-keyframes e1000 { from {box-shadow: 0 0 2px 2px #000;} to {box-shadow: 0 0 2px 2px #115725;} }
+
+@keyframes e100 { from {box-shadow: 0 0 2px 2px #000;} to {box-shadow: 0 0 2px 2px #6b481a} }
+@-webkit-keyframes e100 { from {box-shadow: 0 0 2px 2px #000;} to {box-shadow: 0 0 2px 2px #6b481a;} }
+
+#eth_off { opacity: 0.4 }
+
+/* WLAN tabs */
+#sesdiv > .section > #tabs a { width: auto; min-width: 75px; }
+
+#survey-msg {
+	border-radius: 6px;
+	background: rgba(0,0,0,0.03) !important;
+}
+
+.tomato-grid, .bwmg {
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.3);
+	border-top-color: rgba(0,0,0,0.15);
+	border-radius: 6px;
+	margin-bottom: 6px;
+}
+
+.tomato-grid input, .tomato-grid select {
+	font-size: 0.9em;
+}
+
+.tomato-grid select {
+	background-position: right -67px !important;
+}
+
+.tomato-grid .header td, .bwmg .header td, .tomato-grid .controls td, .tomato-grid .footer td {
+	background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent) !important;
+}
+
+.tomato-grid .header td, .bwmg .header td {
+	border: 1px none rgba(0,0,0,0.05);
+	border-right-style: solid;
+}
+
+.tomato-grid .header td:last-child, .bwmg .header td:last-child { border-right-style: none; }
+.tomato-grid tr:nth-child(2) > td, .bwmg tr:nth-child(2) > td { border-top: 1px solid rgba(0,0,0,0.05); }
+
+.tomato-grid tr:first-child > td:first-child, .bwmg tr:first-child > td:first-child { border-top-left-radius: 6px; }
+.tomato-grid tr:first-child > td:last-child, .bwmg tr:first-child > td:last-child { border-top-right-radius: 6px; }
+
+.tomato-grid tr:last-child > td:first-child, .tomato-grid tr:only-child > td:last-child, .bwmg tr:last-child > td:first-child {
+	border-bottom-left-radius: 6px;
+}
+
+.tomato-grid tr:last-child > td:last-child, .tomato-grid tr:only-child > td:last-child, .bwmg tr:last-child > td:last-child {
+	border-bottom-right-radius: 6px;
+}
+
+.tomato-grid .even, .tomato-grid .even:hover, .bwmg .even { background: rgba(0,0,0,0.01); }
+.tomato-grid .odd, .tomato-grid .odd:hover, .bwmg .odd { background: rgba(0,0,0,0.02); }
+
+.tomato-grid .editor { background: linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.02) 10%, rgba(0,0,0,0.02) 90%, rgba(0,0,0,0.04)); }
+.tomato-grid .editor td, .tomato-grid .controls td, .tomato-grid .footer td { border-top: 1px solid rgba(0,0,0,0.15); }
+
+.tomato-grid .sortasc:after, .tomato-grid .sortdes:after {
+	content: "";
+	position: relative;
+	background-position: -49px -74px !important;
+	width: 8px;
+	height: 6px;
+	top: 4px;
+}
+
+.tomato-grid .sortasc:after {
+	transform: rotate(180deg);
+	top: 2px;
+}
+
+.tomato-grid tr:only-child > .header td { border-bottom-style: none; }
+.tomato-grid td, .bwmg td { padding: 3px 4px; }
+
+/* Basic: Network - LAN IP Range */
+#lan-grid .fi6 {
+	margin-bottom: 3px;
+}
+
+/* Device List: Make MAC clickable for OUI but still allow MAC highlighting */
+#dev-grid .co2 small a:first-child { 
+	position: absolute;
+	margin: -15px 0 0 5px;
+	width: 90px;
+	height: 15px;
+	color: transparent;
+	font-size: 0;
+}
+
+#dev-grid .co1 { width: 75px !important; }
+#dev-grid .co2 { width: 120px !important; }
+#dev-grid .co3, #dev-grid .co8 { width: 95px !important; }
+#dev-grid .co3, #dev-grid .co5, #dev-grid  .co6 { text-align: center; }
+#dev-grid .co5, #dev-grid  .co6 { width: 60px !important; }
+#dev-grid .co7 { width: 85px !important; }
+
+/* MAC Control Opacity */
+#dev-grid .co2 small { opacity: 0.3; }
+
+#dev-grid .co2:hover small {
+	opacity: 1;
+	transition-duration:.2s;
+	transition-timing-function:ease-in-out;
+}
+
+/* WiFi Signal Icons */
+#dev-grid .co6 small, #survey-grid .co6 small { display: none }
+
+.co6 img[src*="bar"] {
+	width: 0;
+	height: 0;
+	padding: 15px 19px 0 0;
+	background: url('glyph.svg') no-repeat;
+}
+
+.co6 img[src*="bar1"] { background-position: -40px -159px }
+.co6 img[src*="bar2"] { background-position: -40px -88px }
+.co6 img[src*="bar3"], .co6 img[src*="bar4"] { background-position: -20px -88px; }
+.co6 img[src*="bar5"], .co6 img[src*="bar6"] { background-position: 0 -88px }
+
+/* Bandwidth: Daily - Right Float */
+div[style="float:right;text-align:right"] > .tomato-grid .header > td { border-top-left-radius: 6px; }
+#dafm, #shmode, #startwk { margin-bottom: 3px; }
+
+/* Tools: WOL */
+#wol-grid .even .co1, #wol-grid .odd .co1 { text-transform: uppercase; }
+
+/* Administration: Assorted */
+#restore-name { padding: 4px 0; }
+#box-input input[type="file"]{ height: 28px !important; }
+#box-input input[type="button"]{ height: 22px !important; }
+
+/* About: Linux Logo */
+#content #tux {
+	width: 0px;
+	height: 0px;
+}
+
+div[style="float:right;margin:20px 20px;text-align:center"] {
+	height: 100px;
+	width: 90px;
+	border-radius: 6px;
+	border: 1px solid #CCC;
+	position: relative;
+	background: url("glyph.svg") no-repeat 12px -62px;
+	background-size: 125px;
+}
+
+div[style="float:right;margin:20px 20px;text-align:center"]:after {
+	content: "";
+	position: relative;
+	height: 100px;
+	display: block;
+	background: url("glyph.svg") no-repeat -217px -1260px;
+	background-size: 470px;
+}
+
+div[style="float:right;margin:20px 20px;text-align:center"]:before {
+	content: "Powered by\aTomato & Linux";
+	position: relative;
+	white-space: pre;
+	display: block;
+	font: bold 0.8em sans-serif;
+	color: #AF4141;
+	top: 75px;
+}
+
+.about input { 
+	border: 0 !important;
+	background-color: transparent !important;
+}
+
+/* About: Theme Credits */
+.about div:before {
+	content: "\"Stornur\" Tomato \D Theme:";
+	display: block;
+	font-weight: bold;
+}
+
+.about div b:before {
+	content: "\a- Created by WaLLy3K (Active on Twitter, Steam & Reddit)\a- Layout inspired by \"Ajenti\" Administration Panel \a9  Ajenti Project (ajenti.org)\a- \"Stornur\" is a reference to Glitch \a9  Tiny Speck (glitchthegame.com)";
+	white-space: pre;
+	display: block;
+	font-weight: normal;
+	position: relative;
+	margin-top: -14px;
+	padding-bottom: 23px;
+	margin-bottom: 20px;
+	border-bottom:1px solid #e7e7e7;
+}
+
+/* Site-wide Width Fixes */
+/* Status: Overview */
+#b_connect, #b_disconnect, #b_wl0_enable, #b_wl0_disable, #b_wl1_enable, #b_wl1_disable, #refresh-button { width: 80px; }
+
+/* Bandwidth & IPT */
+#shmode, #dafm, #_f_dafm, #_f_begin_date, #_f_end_date{ width: 120px; }
+#startwk, #scale, #_f_scale { width: 60px; }
+#_f_ipt_addr_shown, #_f_ipt_addr_hidden { min-width: 210px; }
+
+/* Basic: Network */
+#_mtu_enable, input[id*="_wds_"], #_f_ipv6_rtr_addr_auto, input[id$="_key1"], input[id$="_key2"], input[id$="_key3"], input[id$="_key4"] { margin-right: 5px; }
+#_wl0_channel, input[id$="_wpa_psk"], input[id$="_radius_key"], input[id$="_passphrase"], input[id$="_wep_gen"] { margin-right: 2px; }
+#_wan_proto, #_ppp_demand, #_modem_ipaddr, #_f_dns_1, #_f_dns_2, #_f_dns_3, #_wan_wins, input[id^="_wan_"], #_modem_init, #_modem_apn, input[id$="_radius_ipaddr"] { width: 160px; }
+#_mtu_enable { width: 95px; }
+#_f_wan_mtu, #_ppp_redialperiod, #_pppoe_lei, #_pppoe_lef, input[id$="_wpa_gtk_rekey"], input[id$="_radius_port"]  { width: 60px; }
+#_ppp_username, #_ppp_passwd, #_ppp_service, #_ppp_custom, #_wl0_wpa_psk, #_wl1_wpa_psk, input[id$="_radius_key"] { width: 480px; }
+#_modem_dev, #_modem_pin { width: 120px; }
+#_f_wl0_mode, #_f_wl1_mode, #_wl0_security_mode, #_wl1_security_mode, #_wl0_ssid, #_wl1_ssid { width: 190px; }
+#_wl0_channel, #_wl1_channel, input[id*="_wds_"] { width: 140px; }
+#_f_wl0_scan, #_f_wl1_scan { width: 45px; }
+select[id$="_net_mode"], select[id$="_nbw_cap"], select[id$="_nctrlsb"], select[id$="_crypto"], select[id$="_lazywds"], select[id$="_wep_bit"]  { width: 105px; }
+input[id$="_passphrase"] { width: 195px; }
+
+/* Basic */
+#_ipv6_service { width: 230px; }
+#_f_ipv6_prefix, input[id^="_f_ipv6_dns_"] { width: 480px; }
+#_f_ipv6_prefix_length, #_f_ipv6_rtr_addr_auto, #_ipv6_relay, #_ipv6_tun_mtu, #_ipv6_tun_ttl, #_ipv6_tun_addrlen, #_ipv6_6rd_prefix_length, #_ipv6_6rd_ipv4masklen, #_ipv6_ifname { width: 80px; }
+#_f_ipv6_rtr_addr { width: 395px; }
+#_ipv6_tun_addr { width: 391px; }
+#_ipv6_tun_v4end { width: 160px; }
+#_router_name, #_wan_hostname, #_wan_domain { width: 180px; }
+#_tm_sel { width: 475px; }
+#_ntp_updates, #_f_ntp_server { width: 130px; }
+#_f_ddnsx_ip { width: 380px; }
+#_f_service0 , #_f_service1 { width: 200px; }
+
+/* Advanced */
+#_f_nf_ttl, #_f_ttl_val { width: 80px; margin-right: 5px; }
+#_f_dhcpd_sltsel { width: 205px; margin-right: 2px; }
+#_f_icmp_limit_icmp, #_f_icmp_limit_traceroute, #_f_udpxy_clients, #_f_udpxy_port { width: 60px; }
+#_nf_loopback, #_ne_snat { width: 130px; }
+#_wait_time, #_wan_speed { width: 100px; }
+#_wk_mode { width: 85px; }
+
+/* Advanced: Wireless */
+select[id$="_afterburner"], select[id$="_ap_isolate"], select[id$="_auth"], select[id$="_rateset"], select[id$="_gmode_protection"], select[id$="_reg_mode"], 
+select[id$="_btc_mode"], select[id$="_frameburst"], select[id$="_mrate"], select[id$="_plcphdr"], select[id$="_mimo_preamble"], select[id$="_obss_coex"], 
+select[id$="_antdiv"], select[id$="_txant"], select[id$="_rate"], select[id$="_wme"], select[id$="_wme_no_ack"], select[id$="_wme_apsd"], select[id$="_wmf_bss_enable"] , 
+input[id$="_bcn"], input[id$="_distance"], input[id$="_dtim"], input[id$="_frag"], input[id$="_maxassoc"], input[id$="_rts"], input[id$="_txpwr"]
+{ width: 115px; }
+select[id$="_mitigation"] { width: 240px; }
+select[id$="_country_code"] { width: 405px; }
+
+/* Access Restriction */
+#_f_sched_begin, #_f_sched_end { width: 90px; }
+#_f_comp_all { width: 180px; }
+
+/* QoS */
+#_qos_default { width: 105px; }
+#_qos_pfifo, #_qos_obw, #_qos_ibw, #_ne_valpha, #_ne_vbeta, #_ne_vgamma { width: 80px; }
+select[id^="_f_orate_"], select[id^="_f_oceil_"], select[id^="_f_iceil_"]  { width: 65px; margin-right: 2px; }
+#_f_qos_0, #_f_qos_1, #_f_qos_2, #_f_qos_3, #_f_qos_4, #_f_qos_5, #_f_qos_6, #_f_qos_7, #_f_qos_8, #_f_qos_9 { width: 140px; }
+.x1a .fi1, .x1a .fi3, .x3a .fi6, .x4a .fi8 { width: 120px; }
+.x1b .fi2 { margin-left: 5px; width: 230px; }
+.x2b .fi4 { margin-left: 2px; width: 80px; }
+.x2c .fi5 { margin-left: 6px; width: 145px; }
+.x3b .fi7 { margin-left: -16px; width: 230px; }
+.x4b .fi9 { margin-left: -79px; width: 230px; }
+.x5a .fi10, .x5c .fi11 { width: 80px; }
+.x5b { margin: 0 -6px 0 4px !important; }
+.x5d { margin-left: 6px !important; }
+
+/* USB & NAS */
+#_ftp_enable { width: 155px; }
+#_ftp_anonymous { width: 100px; }
+#_ftp_dirlist { width: 185px; }
+#_smbd_enable, #_smbd_cpage { width: 230px; }
+#_smbd_autoshare { width: 160px; }
+#_ms_port { margin-right: 4px; }
+
+/* VPN Tunnelling */
+#_vpn_server1_if, #_vpn_server2_if, #_vpn_server1_proto, #_vpn_server2_proto, #_vpn_client1_if, #_vpn_client2_if, #_vpn_client1_proto, #_vpn_client2_proto { width: 60px; }
+#_vpn_server1_firewall, #_vpn_server2_firewall, #_vpn_server1_crypt, #_vpn_server2_crypt, #_vpn_server1_hmac, #_vpn_server2_hmac, #_vpn_client1_hmac, #_vpn_client2_hmac { width: 115px; }
+#_vpn_server1_cipher, #_vpn_server2_cipher , #_vpn_client1_cipher, #_vpn_client2_cipher { width: 135px; }
+#_vpn_server1_comp, #_vpn_server2_comp , #_vpn_server1_reneg, #_vpn_server2_reneg, #_vpn_client1_firewall, #_vpn_client2_firewall, #_vpn_client1_crypt, #_vpn_client2_crypt, #_vpn_client1_adns, #_vpn_client2_adns, #_vpn_client1_comp, #_vpn_client2_comp, #_vpn_client1_reneg, #_vpn_client2_reneg, #_vpn_client1_retry, #_vpn_client2_retry { width: 95px; }
+#_vpn_server1_sn, #_vpn_server2_sn, #_vpn_client1_addr, #_vpn_client2_addr, #_vpn_client1_local, #_vpn_client2_local, #_pptp_client_mtuenable, #_pptp_client_mruenable { margin-right: 5px; }
+
+#_f_pptpd_startip, #_f_pptpd_endip, #_pptpd_broadcast, input[id^="_pptpd_dns"], input[id^="_pptpd_wins"] { width: 160px; }
+#_pptpd_forcemppe { width: 100px; }
+#_pptp_client_crypt { width: 180px; }
+#_pptp_client_peerdns { width: 90px; }
+#_pptp_client_mtuenable, #_pptp_client_mruenable { width: 75px; }
+
+/* Administration */
+#_f_http_local { width: 135px; }
+#_http_lanport, #_f_http_remote { width: 85px; }
+#_web_dir { width: 250px; }
+#_web_css, select[id^="_sesx_b"] { width: 185px; }
+#_tomatoanon_answer { width: 455px; }
+#_tomatoanon_enable, #_f_cifs1_sec, #_f_cifs2_sec { width: 210px; }
+#_f_loc, #_rstats_stime, #_cstats_stime { width: 145px; }
+#_cstats_labels { width: 400px; }
+#restore-mode { width: 315px; }
+#_console_loglevel { width: 35px; }
+#_log_mark, #_log_in, #_log_out, #_log_wmtype { width: 190px; }
+#_rboot_time, #_rcon_time { width: 125px; }
+#_c1_time, #_c2_time, #_c3_time, #_c4_time, #_c5_time { width: 140px; }
+
+/* Footer: Merge with #content to form one box */
+#footer {
+	height: auto;
+	width: 780px;
+	min-height: 5px;
+	padding: 0 5px 5px 0;
+	border-radius: 0 0 6px 6px;
+	float: right;
+	box-shadow: -2px 0 1px -1px rgba(0,0,0,0.08), 2px 0 1px -1px rgba(0,0,0,0.08), 0 2px 1px -1px rgba(0,0,0,0.08);
+}
+
+#refresh-spinner, #wait img, #spin {
+	height: 0;
+	width: 0;
+	margin-top: -3px;
+	background: url(glyph.svg) no-repeat -45px 0px;
+	padding: 16px 16px 0 0;
+	animation: spn 1.5s infinite linear;
+	-webkit-animation: spn 1.5s infinite linear;
+}
+
+/* Tools: Ping/Trace/SC */
+#wait img { margin-top: -1px; }
+@keyframes spn { to {transform: rotate(360deg);} }
+@-webkit-keyframes spn { to {-webkit-transform: rotate(360deg);} }
+
+span#footer-msg {  
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	border: 1px dashed #CBCBCB;
+	border-radius: 6px;
+	background: #F1DD71;
+	padding: 3px 5px;
+}
+
+/* Chrome & Opera */
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+	select { text-indent: 1px; padding: 1px 0; }
+}
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	select { padding: 1px 0 1px 3px; }
+	.tomato-grid .sortdes:after { top: 4px; }
+	.tomato-grid .sortasc:after { top: 3px; }
+	#footer { margin-top: -1px; }
+	#refresh-spinner { margin-top: -3px; }
+	#content #tux { width: 90px; height: 95px; border-radius: 6px; border: 1px solid #CCC; padding: 4px; background-color: #FFF; }
+}

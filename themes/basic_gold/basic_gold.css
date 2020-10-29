@@ -1,0 +1,64 @@
+
+a {
+	color: #EEC900;
+}
+
+a:hover {
+	background: #EEC900;
+	color: #000000;
+}
+
+input[type='button']:hover {
+	background: #EEC900;
+	color: #FFFFFF;
+}
+
+#header {
+	background: #EEC900;
+}
+
+#header .title {
+	font: 26px 'Century Gothic', Tahoma, Arial, Sans-serif;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+}
+#header .version {
+	font: 10px Tahoma, Arial, Sans-serif;
+	color: #FFFFFF;
+	margin: 0; padding: 0;
+}
+
+#navi {
+	background: #FFFFFF;
+}
+#navi a {
+	color: #404040;
+}
+#navi a:hover {
+	background: #EEC900;
+	color: #FFFFFF;
+}
+
+ul.tabs a.active,
+#tabs a.active {
+	background: #EEC900;
+	color: #FFFFFF;
+}
+ul.tabs a:hover,
+#tabs a:hover {
+	background: #EEC900;
+	color: #FFFFFF;
+}
+
+.tomato-grid .odd:hover,
+.tomato-grid .even:hover {
+	background: #FFFFFF;
+}
+.tomato-grid a {
+	color: #FFFFFF;
+}
+
+.about {
+margin:20px 20px;
+}

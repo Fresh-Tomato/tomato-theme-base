@@ -1,0 +1,550 @@
+@import url('https://use.fontawesome.com/releases/v5.12.1/css/solid.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:400,700');
+
+/*Custom Icons*/
+
+/*bullets*/
+td#navi a.indent2:before {
+  width: 15px;
+  content: '\f0da';
+  display: inline-block;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*home*/
+td#navi a:first-of-type:before {
+  content: '\f015';
+  display: inline-block;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*bandwidth*/
+td#navi a.indent1[href*="bwm"]:before {
+  content: '\f1fe';
+  display: inline-block;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*tools
+a.indent1[href*="tools"]:before {
+  content: '\f0ad';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}*/
+
+/*basic*/
+td#navi a.indent1[href*="basic"]:before {
+  content: '\f013';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*advanced*/
+td#navi a.indent1[href*="advanced"]:before {
+  content: '\f7d9';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*port forward*/
+td#navi a.indent1[href*="forward"]:before {
+  content: '\f064';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*access restriction*/
+td#navi a.indent1[href*="restrict"]:before {
+  content: '\f023';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*quality of service*/
+td#navi a.indent1[href*="qos"]:before {
+  content: '\f3fd';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*bandwidth limiter*/
+td#navi a.indent1[href*="bwlimit"]:before {
+  content: '\f05e';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*administration
+td#navi a.indent1[href*="admin"]:before {
+  content: '\f007';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}*/
+
+/*about*/
+td#navi a.indent1[href*="about"]:before {
+  content: '\f05a';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*reboot*/
+td#navi a.indent1[href*="javascript:reboot()"]:before {
+  content: '\f2f9';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*shutdown*/
+td#navi a.indent1[href*="javascript:shutdown()"]:before {
+  content: '\f011';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*logout*/
+td#navi a.indent1[href*="javascript:logout()"]:before {
+  content: '\f2f5';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding-right: 0px !important;
+}
+
+/*logo*/
+table#container td#header div.title:before {
+  content: '\f06c';
+  display: inline-block !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  padding-right: 5px !important;
+}
+
+small a {
+    color: #2180de!important;
+}
+
+small a:hover {
+    background-color: #eee!important;
+    transition:background-color .5s;
+}
+
+body,
+html {
+    background-color: #2b323a;
+}
+
+* {
+    font-family: Roboto;
+  }
+
+.fa {
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+td#navi br {
+    display: none;
+}
+
+table#container {
+    width: 100%!important;
+    margin: 0;
+}
+
+td#content a {
+    color: #2180de;
+}
+
+td#content a:hover {
+    background: 0 0;
+    color: #2ab7eb;
+}
+
+td#navi a.indent1:before {
+    width: 20px;
+}
+
+td#navi a.active.indent1:before {
+    width: 20px;
+    color: #3498db;
+}
+
+td#navi a.indent1[href*=about] {
+    color: #fff;
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    right: 350px;
+    text-shadow: none;
+    font-size: 13px;
+}
+
+td#navi a.active[href*=about] {
+    color: #fff!important;
+}
+
+td#navi a.indent1[href*="javascript:reboot()"] {
+    color: #fff;
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    right: 250px;
+    text-shadow: none;
+    font-size: 13px;
+}
+
+td#navi a.indent1[href*="javascript:shutdown()"] {
+    color: #fff;
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    right: 140px;
+    text-shadow: none;
+    font-size: 13px;
+}
+
+td#navi a.indent1[href*="javascript:logout()"] {
+    color: #fff;
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    right: 50px;
+    text-shadow: none;
+    font-size: 13px;
+}
+
+table#container td#header {
+    background-color: #2180de;
+    border-bottom: none;
+    position: relative;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, .2) 0 0 8px;
+    padding: 0;
+}
+
+table#container td#header div.title {
+    font-family: Montserrat;
+    font-size: 16px;
+    height: 60px;
+    display: block;
+    width: 240px;
+    position: absolute;
+    top: 0;
+    line-height: 60px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+table#container td#header div.version {
+    background-color: #2180de;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 240px;
+    line-height: 60px;
+    padding-left: 20px;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+td#navi {
+    font-size: 13px;
+    width: 240px!important;
+    max-width: 240px;
+    background-color: #2b323a;
+    padding: 10px 0 0;
+    border: 0;
+}
+
+td#navi a {
+    color: #959ba0;
+    display: block;
+    padding: 0;
+}
+
+td#navi a:hover {
+    background-color: #1a69b7;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+td#navi a.indent1 {
+    margin-left: 0;
+    height: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0 0 3px 25px;
+}
+
+td#navi a.indent1.active {
+    color: #fff;
+    font-weight: 700;
+    background-color: #0000;
+}
+
+td#navi a.indent2 {
+    margin-left: 0;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0 0 55px;
+}
+
+td#navi a.indent2.active {
+    background-color: #2180de;
+    color: #fff;
+}
+
+td#content {
+    width: auto;
+    background-color: #ddd;
+    color:#000;
+}
+
+div.section,
+div.section-title {
+    background-color: #fbfbfb;
+    color: #444;
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, .2) 0px 3px 3px;
+}
+
+div.section-title {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    border-bottom: none;
+    color: #2180de;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 20px 40px 0;
+}
+
+div.section {
+    padding-right: 20px;
+    padding-top: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0 40px 10px;
+}
+
+table.tomato-grid {
+    border-spacing: 0;
+    border: none;
+    margin: 0;
+}
+
+table.tomato-grid tr td,
+table.tomato-grid tr.header td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+table.tomato-grid tr.even,
+table.tomato-grid tr.odd {
+    cursor: default;
+}
+
+table.tomato-grid tr.header td {
+    background-color: #fbfbfb!important;
+    font-size: 13px;
+    color: #000;
+}
+
+table.tomato-grid tr td,
+table.tomato-grid tr.odd {
+    background-color: #fbfbfb!important;
+}
+
+table.tomato-grid tr td {
+    font-size: 13px;
+    color: #222;
+}
+
+table.tomato-grid tr td small {
+    display: block;
+}
+
+table.tomato-grid tr td small a {
+    display: inline-block;
+    background-color: #ddd;
+    color: #000;
+    font-size: 11px;
+    border-radius: 0px;
+    padding: 4px 7px;
+}
+
+table.tomato-grid tr td small a:hover {
+    background-color: #eee;
+}
+
+table.tomato-grid .controls,
+table.tomato-grid .editor,
+table.tomato-grid tr.even:hover {
+    background-color: #fff!important;
+}
+
+table.tomato-grid .editor td {
+    border-bottom: none;
+}
+
+input[type=button] {
+    background-color: #2180de;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+input[type=button]:hover {
+    background-color: #599fe4;
+    cursor: pointer;
+    transition:background-color .5s;
+}
+
+div.section div {
+    background-color: transparent;
+    float: none!important;
+    color: #76838f;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #e4eaec;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+}
+
+td#footer {
+    border: none;
+    background-color: #ddd;
+    text-align: right;
+    padding: 0;
+}
+
+td#footer:before {
+    display: block;
+    background-color: #2b323a;
+    width: 240px;
+    min-height: 50px;
+    content: "";
+    float: left;
+}
+
+td#footer div {
+    text-align: right!important;
+    margin-bottom: 15px;
+    margin-right: 44px;
+}
+
+span#footer-msg {
+    background-color:#0000;
+    color:#000;
+    font-size: 12px;
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    float: none;
+    width: 100px;
+    padding: 10px 15px;
+}
+
+div#rstats {
+    background-color: #fbfbfb;
+    color: #222;
+    border-radius: 0px;
+    margin: 20px 40px 0;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, .2) 0px 3px 3px;
+}
+
+div#tab-area {
+    margin-bottom: 10px;
+}
+
+div#tabs-bottom {
+    border: none;
+}
+
+ul#tabs li a {
+    background:#225c95;
+    color:#fff;
+    border-radius: 0px;
+    padding: 8px;
+}
+
+ul#tabs li a.active {
+    background-color: #2180de;
+    color: #fff!important;
+}
+
+ul#tabs li a:hover {
+    background-color: #2180de;
+    color:#fff;
+    font-weight: 400;
+    transition: background-color 0.5s;
+}
+
+td#navi a.indent1[href*=about]:hover,
+td#navi a.indent1[href*="javascript:reboot()"]:hover,
+td#navi a.indent1[href*="javascript:shutdown()"]:hover,
+td#navi a.indent1[href*="javascript:logout()"]:hover {
+    background-color:#00000000!important;
+    color: #fff;
+}
+
+div#ident,
+table#container td#header div.title small,
+span#dtime {
+    display: none;
+}
