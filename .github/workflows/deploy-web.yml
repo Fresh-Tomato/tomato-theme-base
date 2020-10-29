@@ -1,0 +1,51 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Deploy
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # Only run this job if repo is upstream and PR is merged
+    if: github.repository == "Fresh-Tomato/tomato-theme-base" &&
+      github.event.pull_request.merged == true
+
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Generate zip files
+      - name: Generating zip files
+        run: |
+          chmod +x ./scripts/zip-themes.sh
+          ./scripts/zip-themes.sh
+
+      # Deploy to web server
+      - name: rsync
+        # Set the version you want: https://github.com/marketplace/actions/action-rsync
+        uses: up9cloud/action-rsync@master
+        env:
+          # Required
+          HOST: ${{secrets.SSH_HOSTNAME}} # host
+          USER: ${{secrets.SSH_USER_NAME}} # target server ssh user
+          PORT: 22 # target server ssh port
+          KEY: ${{secrets.SSH_KEY_DEPLOY}} # ssh private key
+          SSH_ARGS: "-p 22 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+          # source folder or file
+          SOURCE: ./
+          # target path for folder or file
+          TARGET: ${{secrets.REMOTE_TARGET_PATH}}
+          # Optional (with `default` values)
+          VERBOSE: false # set it true if you want some tips
+          # The final rsync arguments will be "$ARGS $ARGS_MORE".
+          ARGS: -avz --exclude=.git* --include=/screenshots/*** --include=/zip/*** --exclude=* # rsync arguments
