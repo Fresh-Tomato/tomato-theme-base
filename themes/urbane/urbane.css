@@ -1,0 +1,514 @@
+/*
+Urbane Theme by 12xCL :) 
+Based on Tomato by Shibby v1.28
+*/
+body {
+    background-color: #485160;
+    background-image: url(urbane_stripe.png);
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    font: 12px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #222;
+}
+#container {
+    width: 1000px;
+    margin: 0 auto 20px !important;
+    background: transparent;
+}
+#header {
+    height: 100px;
+    padding: 0;
+    border-bottom: 0;
+    background: rgba(30, 38, 50, .3);
+    background-image: url(urbane_header.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#header .title {
+    display: none;
+}
+#ident {
+    display: block;
+    position: absolute;
+    width: 804px;
+    top: 36px;
+    margin-left: -20px;
+    padding-right: 10px;
+    font: normal normal 700 28px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #E5E5DC;
+    letter-spacing: -1px;
+    text-shadow: -2px -2px 0 #2F3949, 2px -2px 0 #2F3949, -2px 2px 0 #2F3949, 2px 2px 0 #2F3949;
+}
+#header .version {
+    display: block;
+    position: relative;
+    width: 186px;
+    left: 0;
+    top: 30px;
+    font: 12px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #C8CCD2;
+    text-align: center;
+    text-shadow: -1px -1px 0 #2F3949, 1px 1px 0 #2F3949, -1px 1px 0 #2F3949, 1px 1px 0 #2F3949;
+}
+#footer {
+    height: 80px;
+    padding: 0 10px 0 30px;
+    border-top: 0;
+    background-color: #1E2632;
+    background-image: url(urbane_footer.png);
+    background-repeat: no-repeat, repeat-x;
+    background-position: 20px center;
+    -webkit-border-bottom-right-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-radius-bottomright: 20px;
+    -moz-border-radius-bottomleft: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#footer-msg {
+    font: 700 16px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+#navi {
+    width: 186px;
+    min-width: 186px;
+    border-right: 0;
+    padding: 0 0 4px 0;
+    background: #1E2632;
+}
+#navi a.indent1 {
+    margin: 5px 5px 2px 5px;
+    padding: 4px 0;
+    background: #697993;
+    font: 16px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #1E2632;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+#navi a.indent1:hover {
+    background: #FFFFF5;
+    color: #1E2632;
+    text-decoration: none;
+}
+#navi a.indent1.active {
+    margin-bottom: 2px;
+    background: #B4CBF0;
+    font-weight: 700;
+    color: #1E2632;
+}
+#navi a.indent1.active:hover {
+    background: #B4CBF0;
+    color: #1E2632;
+    text-decoration: none;
+    cursor: default;
+}
+#navi a.indent2 {
+    margin: 0 11px 2px 11px;
+    padding: 4px 0;
+    background: #8999B3;
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #1E2632;
+    text-align: center;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+#navi a.indent2:hover {
+    background: #FFFFF5;
+    color: #1E2632;
+    text-decoration: none;
+}
+#navi a.indent2.active {
+    background: #FFFFF5;
+    color: #1E2632;
+    font-weight: 700;
+}
+#navi a.indent2.active:hover {
+    background: #FFFFF5;
+    font-weight: 700;
+    color: #1E2632;
+    text-decoration: none;
+    cursor: default;
+}
+#content { 
+    width: 764px;
+    padding: 20px 20px 0 20px; 
+    border-top: 5px solid #1E2632;  
+    border-right: 10px solid #1E2632; 
+    border-bottom: 6px solid #1E2632; 
+    background: #FFFFF5;
+}
+#content br {
+    line-height: 170%;
+}
+#nversion {
+    padding: 0;
+    margin-bottom: 20px;
+    font: 700 18px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #FD1620 !important;
+    text-align: center;
+    border-bottom: 0;
+}
+.tomato-grid {
+    margin: 15px 0 10px 0;
+    border: 0;
+    background: #7E8692;
+}
+.tomato-grid td {
+    padding-right: 6px;
+}
+.tomato-grid .header, .bwmg .header {
+    height: 24px;
+    background: #1E2632;
+    color: #EEEEFF;
+}
+.tomato-grid .header td {
+    font: 700 11px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.tomato-grid .footer {
+    background: #4F5763;
+    color: #EEEEFF;
+}
+.tomato-grid .controls {
+    background: #4F5763;
+}
+.tomato-grid .controls input {
+    font: 700 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.tomato-grid .editor {
+    background: #FFF;
+}
+.tomato-grid .even, .bwmg .even {
+    background: #FFF;
+    padding: 2px 
+}
+.tomato-grid .odd, .bwmg .odd {
+    background: #E5E5E8;
+} 
+.tomato-grid .even:hover, .tomato-grid .odd:hover {
+    background: #A9B9D3;
+    text-decoration: none;
+}
+.tomato-grid td {
+    font: "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.tomato-grid a {
+    color: inherit; 
+    padding: 1px 2px;
+}
+.tomato-grid a:hover {
+    color: inherit; 
+}
+.fields {
+    margin: 5px;
+    margin-left: 0;
+    font: "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.fields td {
+    padding: 2px 0 0 4px;
+}
+.fields td.title {
+    width: 210px;
+}
+.fields td.content {
+    max-width: 585px;
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.fields td.title.indent1 {
+    padding: 2px 5px 0 0;
+    font: 700 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #454142;
+    text-align: right;
+}
+.fields td.title.indent2 {
+    border-right: 5px solid transparent;
+    padding: 2px 5px 0 0;
+    font: 700 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #454142;
+    text-align: right;
+}
+.section {
+    padding: 5px 10px 8px 10px;
+    margin: -20px 0 15px; 
+    font: "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.section-title {
+    margin: 0 0 20px;
+    padding: 2px 0 2px 8px;
+    border-bottom: 0;
+    border: 2px solid #313C4E;
+    background: #C8CCD2;
+    font: 700 2.2em Trebuchet, "Trebuchet MS", Tahoma, Geneva, sans-serif;
+    color: #29303B;
+    -webkit-border-top-right-radius: 20px;
+    -webkit-border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+#ports {
+    padding-left: 38px;
+}
+#ports .section-title {
+    margin: 15px -10px 0 -38px;
+    padding-bottom: 4px;
+}
+a {
+    display: inline-block;
+    font: normal normal 600 inherit "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #222;
+    background: #DEE5F0;
+    padding: 1px 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.section-title a {
+    background: transparent;
+    font: italic 20px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #37332D;
+}
+a:hover {
+    background: #DEE5F0;
+    color: #222;
+    text-decoration: underline;
+}
+.section-title a:hover {
+    background: transparent;
+}
+input[type='checkbox'] {
+    cursor: pointer;
+}
+input[type='checkbox'][disabled] {
+    cursor: default;
+}
+input, select {
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+input[type='button'], #refresh-button {
+    width: 100px;
+}
+input[type='button'] {
+    margin-right: 5px;
+    padding: 4px 10px 4px 10px;
+    border: 2px solid rgba(127, 127, 127, .5);
+    font: 700 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #1E2632;
+    cursor: pointer;
+    background: rgba(255, 255, 255, .5);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+input[type='button']:hover {
+    padding: 4px 10px 4px 10px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #EEEEFF;
+    text-decoration: none;
+    background: #1E2632;
+}
+input[type='button']:active {
+    padding: 4px 10px 4px 10px;
+    background: #6495ED;
+    color: #EEEEFF;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+input[type="button"][disabled], input[type="button"][disabled]:hover {
+    padding: 4px 10px 4px 10px;
+    border: 2px solid #BEBEBF;
+    font: 700 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #AAA;
+    cursor: default;
+    background: #EEE;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+input[type=text], input[type=password], textarea, select { 
+    padding: 3px 0 3px 3px;
+    margin: 3px 1px 3px 0;
+    border: 2px solid #BEBEBF;
+    background: #E5E5E8;
+    font: normal 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #111;
+    overflow: hidden;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+input[type=text][disabled], input[type=password][disabled], textarea[disabled], select[disabled] { 
+    border: 2px solid #9E9E9F;
+    background: #C5C5C8;
+    color: #444;
+    cursor: default;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus, select:focus { 
+    padding: 3px 0 3px 3px;
+    margin: 3px 1px 3px 0;
+    border: 2px solid rgba(100, 149, 237, 1);
+    background: #FFF;
+    box-shadow: 0 0 5px rgba(100, 149, 237, 1);
+}
+ul {
+    padding: 10px 0 10px 20px;
+    font-size: 110%;
+}
+#tabs-bottom, div.tabs-bottom {
+    border-top: 0;
+}
+ul.tabs {
+    padding: 0;
+    margin: 0;
+}
+#tabs li a, 
+ul.tabs li a, ul.tabs a { 
+    width: 110px;
+    margin: 3px 5px 3px 0;
+    padding: 4px 4px 6px 4px;
+    border: 2px solid #BEBEBF;
+    background: #FFF;
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #1E2632;
+    cursor: pointer;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+#tabs li a:hover { 
+    background: #DEE5F0;
+    font-weight: normal;
+    color: #1E2632;
+    text-decoration: none;
+}
+#tabs li a.active { 
+    background: #B4CBF0;
+    color: #1E2632;
+}
+#tabs li a.active:hover { 
+    background: #B4CBF0;
+    font-weight: 700;
+    color: #1E2632;
+    cursor: default;
+}
+ul.tabs li a:hover { 
+    background: #DEE5F0;
+    font-weight: normal;
+    color: #1E2632;
+    text-decoration: none;
+}
+ul.tabs a.active { 
+    background: #DEE5F0;
+    color: #1E2632;
+}
+ul.tabs a.active:hover { 
+    background: #DEE5F0;
+    font-weight: 700;
+    color: #1E2632;
+    cursor: default;
+}
+#_bt_blocklist_url {
+    width: 566px; 
+}
+.about {
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.about br {
+    line-height: 140%;
+}
+#_fom .about {
+    margin: -20px -5px 0 0;
+}
+#rstats, #cstats {
+    padding-top: 10px;
+    padding-left: 0;
+    background: none;
+}
+#cstats #tab-area ul a, #rstats #tab-area ul a {
+    padding-top: 2px;
+    padding-bottom: 7px;
+    margin-bottom: 15px;
+}
+#cstats #tabs small {
+    display: block;
+    color: #454142;
+    line-height: 24px;
+}
+#_rstats_exclude, #_cstats_exclude, #_cstats_include {
+    display: block;
+}
+span#last-dates[style] {
+    color: #EEEEFF !important;
+}
+.bwmg {
+    width: 500px;
+    padding: 0;
+    margin: 15px 0 20px 20px;
+    border-spacing: 1px;
+    border-collapse: separate;
+    border: 1px solid #EEEEDE;
+    background: #FFF;
+}
+#tab-area {
+    margin-bottom: 20px;
+}
+#cpu small {
+    font-size: 14px;
+}
+span[style] {
+    display: block;
+    padding-left: 15px;
+    font: 14px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #111 !important;
+    line-height: 135%;
+}
+span#b_dhcpc[style] {
+    padding-left: 0;
+}
+.section #wol-grid {
+    margin-bottom: 40px;
+}
+#refreshb {
+    float: left;
+    margin-top: -30px;
+    margin-right: 0;
+}
+#save-button {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#footer #save-button {
+    margin-top: 0;
+}
+#b_wl0_enable {
+    margin-right: 10px;
+}
+div#graph[style] {
+border: 1px solid #BEBEBF !important; 
+}
+#afu-input #box-input {
+    padding: 20px;
+    background: #E5E5E5;
+}
+#afu-input .section {
+    font: 16px "Droid Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+#afu-upgrade-button[style] {
+    height: 30px !important;
+}
+input[style] {
+    height: 30px !important;
+}
+#_upnp_custom {
+width: 560px;
+height: 216px;
+}

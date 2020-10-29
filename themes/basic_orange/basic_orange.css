@@ -1,0 +1,63 @@
+a {
+	color: #FFA500;
+}
+
+a:hover {
+	background: #FFA500;
+	color: #000000;
+}
+
+input[type='button']:hover {
+	background: #FFA500;
+	color: #515e71;
+}
+
+#header {
+	background: #FFA500;
+}
+
+#header .title {
+	font: 26px 'Century Gothic', Tahoma, Arial, Sans-serif;
+	color: #515e71;
+	margin: 0;
+	padding: 0;
+}
+#header .version {
+	font: 10px Tahoma, Arial, Sans-serif;
+	color: #515e71;
+	margin: 0; padding: 0;
+}
+
+#navi {
+	background: #FFFFFF;
+}
+#navi a {
+	color: #404040;
+}
+#navi a:hover {
+	background: #FFA500;
+	color: #515e71;
+}
+
+ul.tabs a.active,
+#tabs a.active {
+	background: #FFA500;
+	color: #515e71;
+}
+ul.tabs a:hover,
+#tabs a:hover {
+	background: #FFA500;
+	color: #515e71;
+}
+
+.tomato-grid .odd:hover,
+.tomato-grid .even:hover {
+	background: #515e71;
+}
+.tomato-grid a {
+	color: #515e71;
+}
+
+.about {
+margin:20px 20px;
+}
