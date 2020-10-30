@@ -1,3 +1,5 @@
 # 🍅 tomato-theme-base
-Tomato Theme Base
-url: https://tomatothemebase.eu
+
+Tomato Theme Base is a repository of themes for your Tomato-based firmware router.
+
+Go to our wiki to find out how to contribute: https://github.com/Fresh-Tomato/tomato-theme-base/wiki
