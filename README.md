@@ -1,4 +1,4 @@
-# 🍅 tomato-theme-base
+# 🍅 tomato-theme-base (a.k.a. TTB)
 
 Tomato Theme Base is a repository of themes for your Tomato-based firmware router.
 
