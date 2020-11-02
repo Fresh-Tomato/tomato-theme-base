@@ -6,9 +6,9 @@ Tomato Theme Base is a repository of themes for your Tomato-based firmware route
 
 Go to our wiki to find out how to contribute: https://github.com/Fresh-Tomato/tomato-theme-base/wiki
 
-## Screenshot Gallery
+## Theme Gallery
 
-![Screenshot Gallery](https://github.com/Fresh-Tomato/tomato-theme-base/wiki/images/screenshots-gallery.jpg)
+https://tomatothemebase.eu/?page_id=1790
 
 ## Links
 
