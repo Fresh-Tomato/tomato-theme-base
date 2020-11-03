@@ -94,7 +94,7 @@ table#container td#header {
 }
 
 table#container td#header div.title {
-    font-size: 18px;
+    font-size: 16px;
     height: 60px;
     display: block;
     width: 240px;
@@ -115,7 +115,7 @@ table#container td#header div.version {
     padding-left: 20px;
     color: #fff;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 td#navi {
@@ -413,4 +413,20 @@ td#navi a.indent1[href*="javascript:logout()"]:hover {
 div#ident,
 table#container td#header div.title small {
     display: none;
+}
+
+.note-disabled,
+div#notice,
+div#survey-msg,
+div#survey-warn {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+.iperf_status_table,
+div#tools-grid {
+    margin: 0px 60px 10px;
+    border:none;
+    width:auto;
 }
