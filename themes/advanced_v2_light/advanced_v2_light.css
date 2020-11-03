@@ -1,4 +1,4 @@
-@import url('https://use.fontawesome.com/releases/v5.12.1/css/solid.css');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/solid.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:400,700');
 
 /*Custom Icons*/
@@ -547,4 +547,23 @@ div#ident,
 table#container td#header div.title small,
 span#dtime {
     display: none;
+}
+
+div#note-disabled,
+div#notice,
+div#survey-msg,
+div#survey-warn {
+    background-color: #fbfbfb;
+    color: #000;
+    border-color: #000;
+}
+
+.iperf_status_table,
+div#tools-grid {
+    background-color: #fbfbfb;
+    margin: 0px 40px 10px;
+    padding: 20px;
+    width:auto;
+    border:none;
+    box-shadow: rgba(0, 0, 0, .2) 0px 3px 3px;
 }

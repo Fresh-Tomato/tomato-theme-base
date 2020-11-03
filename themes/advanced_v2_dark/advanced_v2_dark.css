@@ -1,4 +1,4 @@
-@import url('https://use.fontawesome.com/releases/v5.12.1/css/solid.css');
+@import url('https://use.fontawesome.com/releases/v5.15.1/css/solid.css');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500|Roboto:400,700');
 
 /*Custom Icons*/
@@ -590,4 +590,20 @@ td#navi a.indent1[href*="javascript:logout()"]:hover {
 div#ident,
 table#container td#header div.title small {
     display: none;
+}
+
+.note-disabled,
+div#notice,
+div#survey-msg,
+div#survey-warn {
+    background: none;
+    color: #fff;
+    border-color: #fff;
+}
+
+.iperf_status_table,
+div#tools-grid {
+    margin: 0px 60px 10px;
+    border:none;
+    width:auto;
 }
